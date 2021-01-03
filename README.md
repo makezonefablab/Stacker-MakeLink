@@ -1,7 +1,7 @@
 # Stacker-MakerEdu
 scratch IO Board based on Arduino
-![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png)  
 
+<img src="https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
 
 
 
