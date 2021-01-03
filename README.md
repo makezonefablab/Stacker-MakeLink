@@ -7,3 +7,4 @@ scratch IO Board based on Arduino
 
 [*스태커 체험하기*](https://stacker.fun)
 
+![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png)  
