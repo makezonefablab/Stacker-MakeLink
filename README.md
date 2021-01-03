@@ -3,6 +3,9 @@ scratch IO Board based on Arduino
 
 <img src="https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png" width="380px" title="메이커 에듀 " alt="RubberDuck"></img><br/>
 
+> **Note:** 이 소프트웨어는 현재 계속 업데이트 중 입니다. 현재 버전은 1.0 입니다.
+
+
 
 
 
@@ -33,3 +36,11 @@ scratch IO Board based on Arduino
 스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
 
 ![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink.png)  
+
+
+## Quickstart
+
+1. [Install] the Arduino CLI
+2. Follow the [Getting Started] guide to check out what the CLI can do
+3. Browse the [Commands reference] to see all the available commands
+4. Should you have an issue, read the [FAQ] page
