@@ -13,3 +13,14 @@ scratch IO Board based on Arduino
 [*스태커 체험하기*](https://stacker.fun)
 
 ![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/stacker.png)  
+
+
+---------------------------------------
+
+#### 메이커 링크
+
+스크래치의 Scratch Link와 같은 기능이지만, 시리얼통신을 하도록 구성되었습니다.
+
+스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
+
+![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/stacker.png)  
