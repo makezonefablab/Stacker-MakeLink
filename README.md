@@ -9,7 +9,7 @@ scratch IO Board based on Arduino
 
 
 
-### 스태커, 스크래치 기반의 STEAM 코딩 툴
+## 스태커, 스크래치 기반의 STEAM 코딩 툴
 
 스크래치 기반의 STEAM 코딩 툴 , 스태커(Stacker) 입니다.
 
@@ -29,7 +29,7 @@ scratch IO Board based on Arduino
 
 ---------------------------------------
 
-### 메이커 링크
+## 메이커 링크
 
 스크래치의 Scratch Link와 같은 기능이지만, 시리얼통신을 하도록 구성되었습니다.
 
@@ -40,7 +40,7 @@ scratch IO Board based on Arduino
 
 ## Quickstart
 
-1. [Install] the Arduino CLI
-2. Follow the [Getting Started] guide to check out what the CLI can do
-3. Browse the [Commands reference] to see all the available commands
-4. Should you have an issue, read the [FAQ] page
+1. 메이커 링크 실행 (시리얼 포트 접속)
+2. 스태커 실행
+3. 메이커 에듀 익스텐션 추가
+4. 코딩 !!!
