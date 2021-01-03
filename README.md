@@ -1,5 +1,6 @@
 # Stacker-MakerEdu
 scratch IO Board based on Arduino
+![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png)  
 
 스크래치 기반의 STEAM 코딩 툴 , 스태커(Stacker) 입니다.
 
@@ -7,4 +8,4 @@ scratch IO Board based on Arduino
 
 [*스태커 체험하기*](https://stacker.fun)
 
-![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png)  
+![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/stacker.png)  
