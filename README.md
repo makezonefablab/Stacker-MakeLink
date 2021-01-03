@@ -13,7 +13,9 @@ scratch IO Board based on Arduino
 아두이노 기반의 IO보드와 연동이되며 다양한 하드웨어와 연동이 되도록 구성되었습니다.
 
 
+메이커 에듀보드의 소개는 아래 링크를 확인하세요.
 
+[*메이커 에듀 보드 소개*](http://makezone.co.kr/blog/2018/10/25/%eb%88%84%ea%b5%ac%eb%82%98-%ec%93%b0%eb%8a%94-%eb%a9%94%ec%9d%b4%ed%81%ac-%ec%97%90%eb%93%80make-edu-%eb%b3%b4%eb%93%9c/)
 
 
 
