@@ -6,7 +6,7 @@ scratch IO Board based on Arduino
 
 
 
-#### 스태커, 스크래치 기반의 STEAM 코딩 툴
+### 스태커, 스크래치 기반의 STEAM 코딩 툴
 
 스크래치 기반의 STEAM 코딩 툴 , 스태커(Stacker) 입니다.
 
@@ -24,7 +24,7 @@ scratch IO Board based on Arduino
 
 ---------------------------------------
 
-#### 메이커 링크
+### 메이커 링크
 
 스크래치의 Scratch Link와 같은 기능이지만, 시리얼통신을 하도록 구성되었습니다.
 
