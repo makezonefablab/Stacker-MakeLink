@@ -10,6 +10,9 @@
  * Modify :
  * - Beep 쪽 추가 필요
  * 
+ * 2021.01.24
+ * - LED Strip 코드 추
+ * 
  **************************************************************************/
 
 #include <ArduinoJson.h>
@@ -23,12 +26,15 @@ String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 StaticJsonDocument<200> doc;
 
+Adafruit_NeoPixel strip ;
 
 void setup() {
   // initialize serial:
   Serial.begin(115200);
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
+
+  
 }
 
 void loop() {
@@ -36,7 +42,7 @@ void loop() {
 
   // print the string when a newline arrives:
   if (stringComplete) {
-    //Serial.println("OK : " + inputString);
+    Serial.println("OK : " + inputString);
     // clear the string:
 
     // Deserialize the JSON document
@@ -59,25 +65,29 @@ void loop() {
 
     if(rqtStr.equals("li"))  // LED Strip initialize
     {
-      int no = doc["n"];
-      int count = doc["v"];
-      int pin = doc["p"];
+      int _count = doc["c"];
+      int _pin = doc["p"];
+
+      strip = Adafruit_NeoPixel(_count, _pin, NEO_GRB + NEO_KHZ800);
+      strip.begin();
+      strip.show();
       
     }
     else if(rqtStr.equals("ls"))  // LED Strip set color
     {
-      int no = doc["n"];
       int index = doc["i"];
       int red = doc["r"];
       int green = doc["g"];
       int blue = doc["b"];
       
+      strip.setPixelColor(index, strip.Color(red, green, blue));          //  Neopixel 색상 설정 ( 첫번째 소자위치 , 색상설정(Red) , 0 , 0 )
+      strip.show();
     }
     else if(rqtStr.equals("lb"))  // LED Strip bright
     {
-      int no = doc["n"];
       int bright = doc["v"];
-      
+      strip.setBrightness(bright);    //  BRIGHTNESS 만큼 밝기 설정
+      strip.show();
     } 
     else if(rqtStr.equals("do"))  // Digital Wirte
     {
@@ -113,7 +123,6 @@ void loop() {
     else if(rqtStr.equals("motor")) // Motor
     {
       
-      int pinNO = doc["p"];
       char* motorNO = doc["p"];
       char* motorDir = doc["d"];
       int _value = doc["v"];
