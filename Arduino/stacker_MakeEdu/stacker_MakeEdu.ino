@@ -31,10 +31,9 @@ Adafruit_NeoPixel strip ;
 void setup() {
   // initialize serial:
   Serial.begin(115200);
+  
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
-
-  
 }
 
 void loop() {
@@ -69,7 +68,14 @@ void loop() {
       int _pin = doc["p"];
 
       strip = Adafruit_NeoPixel(_count, _pin, NEO_GRB + NEO_KHZ800);
+      
       strip.begin();
+      
+      for(int i = 0 ; i < _count ; i++)
+      {
+        strip.setPixelColor(i, strip.Color(0, 0, 0));
+      }
+      
       strip.show();
       
     }
@@ -237,6 +243,8 @@ void loop() {
     inputString = "";
     stringComplete = false;
   }
+
+  delay(10);
 
 }
 
