@@ -13,10 +13,18 @@
  * 2021.01.24
  * - LED Strip 코드 추
  * 
+ * 2021.02.05
+ * - #include <makeredu.h>
+ * - start() 함수 호출
+ * - Buzzer, 모터 추가 
+ * - Note는 파라미터 전달 문제있음
+ * - servo 아직 ... 
+ * 
  **************************************************************************/
 
 #include <ArduinoJson.h>
 #include <Adafruit_NeoPixel.h>
+#include <makeredu.h>
 #ifdef __AVR__
   #include <avr/power.h>
 #endif
@@ -34,6 +42,8 @@ void setup() {
   
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
+
+  start();
 }
 
 void loop() {
@@ -95,6 +105,34 @@ void loop() {
       strip.setBrightness(bright);    //  BRIGHTNESS 만큼 밝기 설정
       strip.show();
     } 
+    else if(rqtStr.equals("buzzer"))  // Buzzer
+    {
+      //Serial.println("do");
+      
+      int pinNO = doc["p"];
+      int time1 = doc["ondelay"];
+      int time2 = doc["offdelay"];
+
+      buzzer(time1, time2);
+    }
+    else if(rqtStr.equals("melody_sp"))  // Melody Speed
+    {
+      //Serial.println("do");
+      
+      int spd = doc["s"];
+
+      tempo(spd);
+    }
+    else if(rqtStr.equals("note"))  // Note on
+    {
+      //Serial.println("do");
+      
+      int pinNO = doc["p"];
+      int _t = doc["tempo"];
+      int _b = doc["beat"];
+
+      note(_t, _b);
+    }
     else if(rqtStr.equals("do"))  // Digital Wirte
     {
       //Serial.println("do");
@@ -128,66 +166,12 @@ void loop() {
     }
     else if(rqtStr.equals("motor")) // Motor
     {
-      
-      char* motorNO = doc["p"];
-      char* motorDir = doc["d"];
-      int _value = doc["v"];
 
-      String motorNOStr(motorNO);
-      String motorDirStr(motorDir);
+      int _lspd = doc["lspd"];
+      int _rspd = doc["rspd"];
+      int _t = doc["t"];
 
-      if(motorNOStr.equals("M1"))
-      {
-        if(motorDirStr.equals("CW"))
-        {
-          
-          if(_value > 200) _value=200;
-          else if(_value < 45) _value=45;
-          
-          _value = 255-_value;   
-          analogWrite(6,_value);
-          digitalWrite(9,HIGH);      
-        }
-        else if(motorDirStr.equals("CCW"))
-        {
-          if(abs(_value)>=200) _value=210;
-          else if(abs(_value)<=45) _value=45;
-          
-          analogWrite(6,abs(_value));
-          digitalWrite(9,0);    
-        }
-        else
-        {
-           digitalWrite(6,0);    
-           digitalWrite(9,0);          
-        }
-      }
-      else if(motorNOStr.equals("M2"))
-      {
-        //Serial.println("M2");
-        if(motorDirStr.equals("CW"))
-        {
-          if(_value > 200) _value=200;
-          else if(_value < 45) _value=45;
-          
-          _value = 255-_value;        
-          analogWrite(5,_value);
-          digitalWrite(3,HIGH);
-        }  
-        else if(motorDirStr.equals("CCW"))
-        {
-          if(abs(_value)>=200) _value=210;
-          else if(abs(_value)<=45) _value=45;
-              
-          analogWrite(5,abs(_value));
-          digitalWrite(3,0);    
-        }
-        else
-        {
-           digitalWrite(3,0);    
-           digitalWrite(5,0);  
-        }
-      }
+      motor(_lspd, _rspd, _t);
       
     }
     else if(rqtStr.equals("servo")) // servo control
