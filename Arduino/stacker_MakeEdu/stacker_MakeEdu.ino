@@ -16,9 +16,9 @@
  * 2021.02.05
  * - #include <makeredu.h>
  * - start() 함수 호출
- * - Buzzer, 모터 추가 
+ * - Buzzer, servo, 모터 추가 
  * - Note는 파라미터 전달 문제있음
- * - servo 아직 ... 
+ * 
  * 
  **************************************************************************/
 
@@ -35,6 +35,8 @@ bool stringComplete = false;  // whether the string is complete
 StaticJsonDocument<200> doc;
 
 Adafruit_NeoPixel strip ;
+
+Servo srv[13];
 
 void setup() {
   // initialize serial:
@@ -176,11 +178,17 @@ void loop() {
     }
     else if(rqtStr.equals("servo")) // servo control
     {
-      //Serial.println("servo");
+      int pinNO = doc["p"];
+      int _v = doc["v"];
+      
+      srv[pinNO-1].write(_v);
+      delay(15);
     }
     else if(rqtStr.equals("servo_m")) // servo mode
     {
-      //Serial.println("servo_m");
+      int pinNO = doc["p"];
+      
+      srv[pinNO-1].attach(pinNO);
     }
     else if(rqtStr.equals("ai")) // read analog
     {
