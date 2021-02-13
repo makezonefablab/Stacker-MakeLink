@@ -41,7 +41,10 @@ scratch IO Board based on Arduino
 
 tray에서 더블클릭하여 활성화 후 "장치 연결"에서 알맞은 아두이노 장치를 선택합니다.
 
-그리고, com포트를 찾아 연결합ㄴ디ㅏ.
+그리고, com포트를 찾아 연결합니다.
+
+장치를 선택하고,com포트가 연결되면 이제 사용가능 상태가 됩니다.
+
 
 ![Stacker in_Tray](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/tray.png) 
 
