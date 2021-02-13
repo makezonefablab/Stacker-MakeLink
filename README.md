@@ -35,7 +35,17 @@ scratch IO Board based on Arduino
 
 스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
 
-![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink1.2.png)  
+![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink.png)  
+
+메이커 링크가 실행되면 tray로 이동합니다.
+
+tray에서 더블클릭하여 활성화 후 "장치 연결"에서 알맞은 아두이노 장치를 선택합니다.
+
+그리고, com포트를 찾아 연결합ㄴ디ㅏ.
+
+![Stacker in_Tray](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/tray.png) 
+
+![Stacker devicelist](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/devicelist.png)  
 
 
 ## Quickstart
