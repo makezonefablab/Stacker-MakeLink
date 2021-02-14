@@ -33,13 +33,13 @@ scratch IO Board based on Arduino
 
 스크래치의 Scratch Link와 같은 기능이지만, 시리얼통신을 하도록 구성되었습니다.
 
-스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
+스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드(아두이노 나노호환보드)와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
 
 ![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink.png)  
 
-메이커 링크가 실행되면 tray로 이동합니다.
+메이커 링크가 실행되면 tray로 이동됩니다.
 
-tray에서 더블클릭하여 활성화 후 "장치 연결"에서 알맞은 아두이노 장치를 선택합니다.
+tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장치 연결"에서 알맞은 아두이노 장치를 선택합니다.
 
 그리고, com포트를 찾아 연결합니다.
 
@@ -50,6 +50,8 @@ tray에서 더블클릭하여 활성화 후 "장치 연결"에서 알맞은 아�
 
 ![Stacker devicelist](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/devicelist.png)  
 
+
+아래 링크를 클릭하면 다운로드 됩니다. 메이커 링크는 현재 windows 버전만 개발되었습니다.
 
 ## [*Maker Link Download*](http://naver.me/F9QWKdOv)
 
