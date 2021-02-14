@@ -19,16 +19,18 @@
  * - Buzzer, servo, 모터 추가 
  * - Note는 파라미터 전달 문제있음
  * 
+ * 2021.02.14
+ * - servo 모터 다중제어 완성
+ * - led strip 함수 수정 
+ * 
  * 
  **************************************************************************/
 
+#include <Servo.h>
 #include <ArduinoJson.h>
 #include <Adafruit_NeoPixel.h>
 #include <makeredu.h>
-#ifdef __AVR__
-  #include <avr/power.h>
-#endif
-#include <Servo.h>
+
 
 String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
@@ -45,7 +47,7 @@ void setup() {
   // reserve 200 bytes for the inputString:
   inputString.reserve(200);
 
-  start();
+  //start();
 }
 
 void loop() {
@@ -98,7 +100,7 @@ void loop() {
       int green = doc["g"];
       int blue = doc["b"];
       
-      strip.setPixelColor(index, strip.Color(red, green, blue));          //  Neopixel 색상 설정 ( 첫번째 소자위치 , 색상설정(Red) , 0 , 0 )
+      strip.setPixelColor(index-1, strip.Color(red, green, blue));          //  Neopixel 색상 설정 ( 첫번째 소자위치 , 색상설정(Red) , 0 , 0 )
       strip.show();
     }
     else if(rqtStr.equals("lb"))  // LED Strip bright
