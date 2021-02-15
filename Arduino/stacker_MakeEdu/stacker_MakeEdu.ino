@@ -23,6 +23,9 @@
  * - servo 모터 다중제어 완성
  * - led strip 함수 수정 
  * 
+ * 2021.02.15
+ * - LED strip 버그 수정
+ * 
  * 
  **************************************************************************/
 
@@ -36,7 +39,12 @@ String inputString = "";         // a String to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 StaticJsonDocument<200> doc;
 
-Adafruit_NeoPixel strip ;
+// led 스트립제어를 위한 광역변수 - 기존 버전에서 strip인스턴스를 loop에 설정하면 핀에 노이즈가 생기는 문제가 있는것으로 추정됨
+// 그러므로 인스턴스 설정을 먼저 해주고 loop에서 픽셀개수와 사용핀을 네오픽셀 라이브러리 내 픽셀수와 핀설정 명령함수로 재설정함
+int NUM_LEDS; 
+int portNo;
+
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, portNo, NEO_GRB + NEO_KHZ800);
 
 Servo srv[13];
 
@@ -81,15 +89,9 @@ void loop() {
       int _count = doc["c"];
       int _pin = doc["p"];
 
-      strip = Adafruit_NeoPixel(_count, _pin, NEO_GRB + NEO_KHZ800);
-      
+      strip.updateLength(NUM_LEDS); // 픽셀개수 재설정
+      strip.setPin(portNo);         // 사용포트 재설정
       strip.begin();
-      
-      for(int i = 0 ; i < _count ; i++)
-      {
-        strip.setPixelColor(i, strip.Color(0, 0, 0));
-      }
-      
       strip.show();
       
     }
@@ -107,7 +109,7 @@ void loop() {
     {
       int bright = doc["v"];
       strip.setBrightness(bright);    //  BRIGHTNESS 만큼 밝기 설정
-      strip.show();
+      // strip.show();
     } 
     else if(rqtStr.equals("buzzer"))  // Buzzer
     {
@@ -230,7 +232,7 @@ void loop() {
       //Serial.println("di_m");
       int pinNO = doc["p"];
       
-      pinMode(pinNO,INPUT);
+      pinMode(pinNO,INPUT_PULLUP);
     }
 
     
