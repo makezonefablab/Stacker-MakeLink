@@ -240,8 +240,6 @@ void loop() {
     stringComplete = false;
   }
 
-  delay(10);
-
 }
 
 /*
