@@ -86,8 +86,8 @@ void loop() {
 
     if(rqtStr.equals("li"))  // LED Strip initialize
     {
-      int _count = doc["c"];
-      int _pin = doc["p"];
+      NUM_LEDS = doc["c"];
+      portNo = doc["p"];
 
       strip.updateLength(NUM_LEDS); // 픽셀개수 재설정
       strip.setPin(portNo);         // 사용포트 재설정
