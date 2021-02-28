@@ -15,6 +15,9 @@ scratch IO Board based on Arduino
 
 아두이노 기반의 IO보드와 연동이되며 다양한 하드웨어와 연동이 되도록 구성되었습니다.
 
+[*스태커 소개*](http://makezone.co.kr/blog/2021/01/01/%ec%8a%a4%ed%81%ac%eb%9e%98%ec%b9%98-%ea%b8%b0%eb%b0%98%ec%9d%98-sw-%ec%bd%94%eb%94%a9-%ed%88%b4-%ec%8a%a4%ed%83%9c%ec%bb%a4-stacker/)
+
+
 
 메이커 에듀보드의 소개는 아래 링크를 확인하세요.
 
@@ -36,6 +39,7 @@ scratch IO Board based on Arduino
 스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드(아두이노 나노호환보드)와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
 
 ![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink.png)  
+
 
 메이커 링크가 실행되면 tray로 이동됩니다.
 
