@@ -52,7 +52,7 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 
 ![Stacker in_Tray](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/tray.png) 
 
-# 1. 디바이스 선택
+### 1. 디바이스 선택
 연결 사용할 아두이노 종류를 선택합니다. 메이커 에듀보드는 Arduino Nano입니다.
 
 
@@ -60,14 +60,14 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 
 
 
-# 2. 시리얼포트 선택
+### 2. 시리얼포트 선택
 아두이노를 연결한 시리얼포트 번호를 찾아 선택합니다.
 
 ![Stacker devicelist](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/selectserial.png)
 
 
 
-# 3. 시리얼포트 열기
+### 3. 시리얼포트 열기
 아두이노를 연결한 시리얼포트 번호를 선택 후 "connect" 버튼을 누르면 "disconnect"로 바뀝니다.
 
 
@@ -77,7 +77,7 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 
 
 
-# 4. 펌웨어 업데이트
+### 4. 펌웨어 업데이트
 메이커에듀 블럭과 연동을 위해서는 전용의 펌웨어를 업로드합니다.
 
 
