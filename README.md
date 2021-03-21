@@ -100,9 +100,11 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 ## [*Maker Link Download*](http://naver.me/F9QWKdOv)
 
 
-## 메이커 링크 (for mac)
+## 메이커 링크 (by Processing)
 
 메이커 링크의 간단한 기능을 mac OS 용으로 구성하였습니다.
+
+Processing으로 개발되었으며, www.processing.org에서 그 개발환경을 다운받을 수 있습니다.
 
 스태커 펌웨어를 업로드 하는 기능이 없이 단지, 블럭과의 통신을 통해 프로토콜만 주고 받는 기능으로 이루어졌습니다.
 
