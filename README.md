@@ -32,11 +32,14 @@ scratch IO Board based on Arduino
 
 ---------------------------------------
 
-## 메이커 링크
+## 메이커 링크 (for Microsoft Windows 10)
 
 스크래치의 Scratch Link와 같은 기능이지만, 시리얼통신을 하도록 구성되었습니다.
 
 스태커 실행 전 먼저 메이커 링크를 실행 후 메이커 에듀보드(아두이노 나노호환보드)와 연결합니다. 메이커 에듀보드 익스텐션과 연동하여 콘텐츠를 제작할 수 있습니다.
+
+메이커 링크는 윈도우10 (windows 10)이상에서 안정되게 작동합니다.
+
 
 ![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink.png)  
 
@@ -96,6 +99,24 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 
 ## [*Maker Link Download*](http://naver.me/F9QWKdOv)
 
+
+## 메이커 링크 (for mac)
+
+메이커 링크의 간단한 기능을 mac OS 용으로 구성하였습니다.
+
+스태커 펌웨어를 업로드 하는 기능이 없이 단지, 블럭과의 통신을 통해 프로토콜만 주고 받는 기능으로 이루어졌습니다.
+
+### 1. 실행
+
+![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac1.png)
+
+### 2. 시리얼포트 선택 후 open
+
+![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac2.png)
+
+### 3. 시리얼포트 열기 성공
+
+![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac3.png)
 
 ## Quickstart
 
