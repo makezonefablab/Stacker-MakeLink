@@ -120,6 +120,13 @@ Processing으로 개발되었으며, www.processing.org에서 그 개발환경�
 
 ![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac3.png)
 
+
+아래 링크를 클릭하면 다운로드 됩니다.
+
+## [*Maker Link Download*](http://naver.me/xScNuPKt)
+
+
+
 ## Quickstart
 
 1. 메이커 링크 실행 (시리얼 포트 접속)
