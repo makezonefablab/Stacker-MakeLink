@@ -26,13 +26,17 @@
  * 2021.02.15
  * - LED strip 버그 수정
  * 
+ * 2021.04.29
+ * - makerEdu_lib로 교체
+ * - Adafruit_NeoPixel.h 주석처리 (makerEdu_lib와 충돌)
+ * 
  * 
  **************************************************************************/
 
 #include <Servo.h>
 #include <ArduinoJson.h>
-#include <Adafruit_NeoPixel.h>
-#include <makeredu.h>
+//#include <Adafruit_NeoPixel.h>
+#include <makerEdu_lib.h>
 
 
 String inputString = "";         // a String to hold incoming data
@@ -44,7 +48,7 @@ StaticJsonDocument<200> doc;
 int NUM_LEDS; 
 int portNo;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, portNo, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip_m = Adafruit_NeoPixel(NUM_LEDS, portNo, NEO_GRB + NEO_KHZ800);
 
 Servo srv[13];
 
@@ -84,32 +88,32 @@ void loop() {
     
     //Serial.println("OK : " + rqtStr);
 
-    if(rqtStr.equals("li"))  // LED Strip initialize
+    if(rqtStr.equals("li"))  // LED strip_m initialize
     {
       NUM_LEDS = doc["c"];
       portNo = doc["p"];
 
-      strip.updateLength(NUM_LEDS); // 픽셀개수 재설정
-      strip.setPin(portNo);         // 사용포트 재설정
-      strip.begin();
-      strip.show();
+      strip_m.updateLength(NUM_LEDS); // 픽셀개수 재설정
+      strip_m.setPin(portNo);         // 사용포트 재설정
+      strip_m.begin();
+      strip_m.show();
       
     }
-    else if(rqtStr.equals("ls"))  // LED Strip set color
+    else if(rqtStr.equals("ls"))  // LED strip_m set color
     {
       int index = doc["i"];
       int red = doc["r"];
       int green = doc["g"];
       int blue = doc["b"];
       
-      strip.setPixelColor(index-1, strip.Color(red, green, blue));          //  Neopixel 색상 설정 ( 첫번째 소자위치 , 색상설정(Red) , 0 , 0 )
-      strip.show();
+      strip_m.setPixelColor(index-1, strip_m.Color(red, green, blue));          //  Neopixel 색상 설정 ( 첫번째 소자위치 , 색상설정(Red) , 0 , 0 )
+      strip_m.show();
     }
-    else if(rqtStr.equals("lb"))  // LED Strip bright
+    else if(rqtStr.equals("lb"))  // LED strip_m bright
     {
       int bright = doc["v"];
-      strip.setBrightness(bright);    //  BRIGHTNESS 만큼 밝기 설정
-      // strip.show();
+      strip_m.setBrightness(bright);    //  BRIGHTNESS 만큼 밝기 설정
+      // strip_m.show();
     } 
     else if(rqtStr.equals("buzzer"))  // Buzzer
     {
