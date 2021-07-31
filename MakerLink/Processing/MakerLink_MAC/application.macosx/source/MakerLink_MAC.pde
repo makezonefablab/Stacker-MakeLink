@@ -1,10 +1,11 @@
 import websockets.*;
 import processing.serial.*;
+import java.util.Arrays;
 
 import controlP5.*;
 
 ControlP5 cp5;
-Textarea myTextarea;
+Textarea sendTextarea, rcvTextarea;
 DropdownList dSerialPorts, d2;
 
 WebsocketServer ws;
@@ -43,9 +44,9 @@ void setup(){
      ;
      
   
-  myTextarea = cp5.addTextarea("txt")
+  sendTextarea = cp5.addTextarea("send")
                   .setPosition(20,80)
-                  .setSize(440,300)
+                  .setSize(220,300)
                   .setFont(createFont("arial",12))
                   .setLineHeight(14)
                   .setColor(color(128))
@@ -53,7 +54,19 @@ void setup(){
                   .setColorForeground(color(255,100));
                   ;
                   
-  myTextarea.setText("Test");
+  sendTextarea.setText("send protocol");
+  
+  rcvTextarea = cp5.addTextarea("receive")
+                  .setPosition(245,80)
+                  .setSize(220,300)
+                  .setFont(createFont("arial",12))
+                  .setLineHeight(14)
+                  .setColor(color(128))
+                  .setColorBackground(color(255,100))
+                  .setColorForeground(color(255,100));
+                  ;
+                  
+  rcvTextarea.setText("receive protocol");
   
   // create a DropdownList, 
   dSerialPorts = cp5.addDropdownList("Serial Ports")
@@ -80,7 +93,7 @@ void setup(){
 
 /////////////////////////////////////////////////////
 public void Clear(int theValue) {
-  myTextarea.setText("");
+  sendTextarea.setText("");
 }
 
 
@@ -112,7 +125,7 @@ public void Open(int theValue) {
         myPort = new Serial(this, "/dev/ttyTHS1", 115200); //for Ubuntu
     
     println("Serial Ports Open !!!");
-    myTextarea.setText("Serial Ports Open !!!");
+    sendTextarea.setText("Serial Ports Open !!!");
     isSerialOpen = true;
   }
   
@@ -201,7 +214,7 @@ void draw(){
   background(0);
 
   if(millis()>now+5000){
-    ws.sendMessage("{\"rsp\":\"ai\",\"p\":\"0\",\"v\":\"500\"}"+'\n');
+    //ws.sendMessage("{\"rsp\":\"ai\",\"p\":\"0\",\"v\":\"500\"}"+'\n');
     now=millis();
   }
 }
@@ -209,7 +222,7 @@ void draw(){
 /////////////////////////////////////////////////////
 void webSocketServerEvent(String msg){
  println(msg);
- myTextarea.setText(msg);
+ sendTextarea.setText(msg);
  
  if(isSerialOpen == true)
  {
@@ -219,10 +232,10 @@ void webSocketServerEvent(String msg){
  /*JSONObject json = parseJSONObject(msg);
  
  if (json == null) {
-    myTextarea.setText("JSONObject could not be parsed");
+    sendTextarea.setText("JSONObject could not be parsed");
   } else {
     String species = json.getString("msg");
-    myTextarea.setText(species);
+    sendTextarea.setText(species);
     
     output = createWriter("makeredu_test.ino");
     output.println(species); // Write the coordinate to the file
@@ -241,10 +254,17 @@ void serialEvent(Serial myPort) {
   serialInArray[serialCount] = (char)inByte;
   serialCount++;
   
-  if((char)inByte == '}')
+  if((char)inByte == '\n')
   {
     serialCount = 0;
-    println(serialInArray);
+    
+    String data = String.valueOf(serialInArray).trim();
+    
+    println(data);
+    ws.sendMessage(data.trim());
+    rcvTextarea.setText(data);
+    
+    serialInArray= new char[30];
     
   }
 }
