@@ -120,6 +120,12 @@ Processing으로 개발되었으며, www.processing.org에서 그 개발환경�
 
 ![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac3.png)
 
+### 4. 화면이 약간 수정 (2021.07.30)
+스태커에서 전송되는 메세지는 왼쪽창에 아두이노에서 전송되는 메세지는 오른쪽창에 나타남
+
+
+![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac4.png)
+
 
 아래 링크를 클릭하면 다운로드 됩니다.
 
