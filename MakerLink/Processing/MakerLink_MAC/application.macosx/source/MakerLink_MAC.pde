@@ -109,7 +109,7 @@ public void Open(int theValue) {
     if (count != index)
         myPort = new Serial(this, Serial.list()[index], 115200);
     else
-        myPort = new Serial(this, "/dev/ttyTHS1", 115200);
+        myPort = new Serial(this, "/dev/ttyTHS1", 115200); //for Ubuntu
     
     println("Serial Ports Open !!!");
     myTextarea.setText("Serial Ports Open !!!");
