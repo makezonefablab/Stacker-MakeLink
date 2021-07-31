@@ -67,7 +67,7 @@ void loop() {
 
   // print the string when a newline arrives:
   if (stringComplete) {
-    Serial.println("OK : " + inputString);
+    // Serial.println("OK : " + inputString);
     // clear the string:
 
     // Deserialize the JSON document
@@ -252,7 +252,8 @@ void loop() {
   delay response. Multiple bytes of data may be available.
 */
 void serialEvent() {
-  while (Serial.available()) {
+  while (Serial.available()) 
+  {
     // get the new byte:
     char inChar = (char)Serial.read();
     // add it to the inputString:
