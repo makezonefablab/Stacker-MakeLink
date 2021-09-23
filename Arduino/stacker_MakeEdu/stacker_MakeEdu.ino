@@ -29,6 +29,9 @@
  * 2021.04.29
  * - makerEdu_lib로 교체
  * - Adafruit_NeoPixel.h 주석처리 (makerEdu_lib와 충돌)
+ *
+ * 2021.09.23
+ * - pinmode에 pullup추가 : rqtStr.equals("dip_m")
  * 
  * 
  **************************************************************************/
@@ -232,6 +235,13 @@ void loop() {
       Serial.write('\n');
     }
     else if(rqtStr.equals("di_m")) // digital input mode
+    {
+      //Serial.println("di_m");
+      int pinNO = doc["p"];
+      
+      pinMode(pinNO,INPUT);
+    }
+    else if(rqtStr.equals("dip_m")) // digital input pullup mode
     {
       //Serial.println("di_m");
       int pinNO = doc["p"];

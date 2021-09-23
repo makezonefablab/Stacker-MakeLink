@@ -214,7 +214,7 @@ void draw(){
   background(0);
 
   if(millis()>now+5000){
-    //ws.sendMessage("{\"rsp\":\"ai\",\"p\":\"0\",\"v\":\"500\"}"+'\n');
+    ws.sendMessage("{\"rsp\":\"ai\",\"p\":\"0\",\"v\":\"500\"}"+'\n');
     now=millis();
   }
 }
