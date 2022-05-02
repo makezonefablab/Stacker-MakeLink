@@ -97,7 +97,7 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 
 아래 링크를 클릭하면 다운로드 됩니다. 메이커 링크는 현재 windows 버전만 개발되었습니다.
 
-## [*Maker Link Download*](http://naver.me/F9QWKdOv)
+## [*Maker Link Download*](http://naver.me/FNuXSfRt)
 
 
 ## 메이커 링크 (by Processing)
