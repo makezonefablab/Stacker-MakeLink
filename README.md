@@ -59,7 +59,7 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 >> 연결 사용할 아두이노 종류를 선택합니다. 메이커 에듀보드는 Arduino Nano입니다.
 
 
->> 아두이노 나노 선택 시 nsno-old와 nano-new가 있는데 최근에 나오는 아두이노 나노는 대부분 new입니다.
+>> 아두이노 나노 선택 시 nano-old와 nano-new가 있는데 최근에 나오는 아두이노 나노는 대부분 new입니다.
 
 
 ![Stacker devicelist](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/selectdevice2.png)
