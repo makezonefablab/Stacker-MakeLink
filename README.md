@@ -3,7 +3,9 @@ scratch IO Board based on Arduino
 
 <img src="https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png" width="380px" title="메이커 에듀 " alt="RubberDuck"></img><br/>
 
-> **Note:** 이 소프트웨어는 현재 계속 업데이트 중 입니다. 현재 버전은 1.0 입니다.
+> **Note:** 이 소프트웨어는 현재 계속 업데이트 중 입니다. 현재 버전은 1.9 입니다.
+> 수정내용 :
+> 1.9버전 초음파센서 인식 기능 추가
 
 
 
