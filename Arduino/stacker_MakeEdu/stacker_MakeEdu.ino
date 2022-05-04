@@ -33,10 +33,12 @@
  * 2021.09.23
  * - pinmode에 pullup추가 : rqtStr.equals("dip_m")
  * 
+ * 2022.05.03
+ * - 초음파 추가 
  * 
  **************************************************************************/
 
-#include <Servo.h>
+//#include <Servo.h>
 #include <ArduinoJson.h>
 //#include <Adafruit_NeoPixel.h>
 #include <makerEdu_lib.h>
@@ -247,6 +249,36 @@ void loop() {
       int pinNO = doc["p"];
       
       pinMode(pinNO,INPUT_PULLUP);
+    }
+    else if(rqtStr.equals("usonic")) // ultrasinoc
+    {
+      //Serial.println("di_m");
+      int pinNO_Trigger = doc["tp"];
+      int pinNO_Echo = doc["ep"];
+
+      pinMode(pinNO_Trigger, OUTPUT);
+      pinMode(pinNO_Echo, INPUT);
+
+      long duration, _distance;
+
+      digitalWrite(pinNO_Trigger, LOW);
+      delayMicroseconds(2);
+      digitalWrite(pinNO_Trigger, HIGH);
+      delayMicroseconds(10);
+      digitalWrite(pinNO_Trigger, LOW);
+    
+      duration = pulseIn (pinNO_Echo, HIGH); //물체에 반사되어돌아온 초음파의 시간을 변수에 저장합니다.
+
+      //34000*초음파가 물체로 부터 반사되어 돌아오는시간 /1000000 / 2(왕복값이아니라 편도값이기때문에 나누기2를 해줍니다.)
+      //초음파센서의 거리값이 위 계산값과 동일하게 Cm로 환산되는 계산공식 입니다. 수식이 간단해지도록 적용했습니다.
+
+      _distance = duration * 17 / 1000.0; 
+      
+      StaticJsonDocument<200> docRsp;
+      docRsp["rsp"] = "usonic";
+      docRsp["v"] = _distance;
+      serializeJson(docRsp, Serial);
+      Serial.write('\n');
     }
 
     
