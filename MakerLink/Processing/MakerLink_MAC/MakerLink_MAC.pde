@@ -1,3 +1,11 @@
+/*
+*  Maker link for Stacker
+*
+*  fix:
+*  2022.05.23
+*
+*/
+
 import websockets.*;
 import processing.serial.*;
 import java.util.Arrays;
@@ -264,7 +272,7 @@ void serialEvent(Serial myPort) {
     ws.sendMessage(data.trim());
     rcvTextarea.setText(data);
     
-    serialInArray= new char[30];
+    serialInArray= new char[50];
     
   }
 }
