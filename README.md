@@ -7,6 +7,8 @@ scratch IO Board based on Arduino
 
 ## 업데이트 내역
 
+## [* 윈도우 버전 Maker Link Download*](http://naver.me/FNuXSfRt)
+
 이 소프트웨어는 현재 계속 업데이트 중 입니다. 현재 버전은 1.9 입니다.  
 * 1.9 버전 : 초음파센서 인식 기능 추가      
 
@@ -104,38 +106,6 @@ tray에서 더블클릭하면 숨겨졌던 메이커에듀가 나타나고, "장
 아래 링크를 클릭하면 다운로드 됩니다. 메이커 링크는 현재 windows 버전만 개발되었습니다.
 
 ## [* 윈도우 버전 Maker Link Download*](http://naver.me/FNuXSfRt)
-
-
-## 메이커 링크 (by Processing)
-
-메이커 링크의 간단한 기능을 mac OS 용으로 구성하였습니다.
-
-Processing으로 개발되었으며, www.processing.org에서 그 개발환경을 다운받을 수 있습니다.
-
-스태커 펌웨어를 업로드 하는 기능이 없이 단지, 블럭과의 통신을 통해 프로토콜만 주고 받는 기능으로 이루어졌습니다.
-
-### 1. 실행
-
-![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac1.png)
-
-### 2. 시리얼포트 선택 후 open
-
-![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac2.png)
-
-### 3. 시리얼포트 열기 성공
-
-![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac3.png)
-
-### 4. 화면이 약간 수정 (2021.07.30)
-스태커에서 전송되는 메세지는 왼쪽창에 아두이노에서 전송되는 메세지는 오른쪽창에 나타남
-
-
-![Maker Link Start](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink_mac4.png)
-
-
-아래 링크를 클릭하면 다운로드 됩니다.
-
-## [* 맥 버전  Maker Link Download*](http://naver.me/xScNuPKt)
 
 
 
