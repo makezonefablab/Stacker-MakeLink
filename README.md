@@ -3,7 +3,7 @@ scratch IO Board based on Arduino
 
 <img src="https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png" width="380px" title="메이커 에듀 " alt="RubberDuck"></img><br/>
 
-## [* 윈도우 버전 Maker Link Download*](http://naver.me/FNuXSfRt)
+## [* 윈도우 버전 Maker Link Download (요기 클릭하여 다운받으세요) *](http://naver.me/FNuXSfRt)
 
 
 
