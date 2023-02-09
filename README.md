@@ -48,7 +48,7 @@ scratch IO Board based on Arduino
 메이커 링크는 윈도우10 (windows 10)이상에서 안정되게 작동합니다.
 
 
-![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makerlink.png)  
+![Stacker Intro](https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/6.png)  
 
 
 메이커 링크가 실행되면 tray로 이동됩니다.
