@@ -2,7 +2,7 @@
 scratch IO Board based on Arduino
 
 <img src="https://github.com/makezonefablab/Stacker-MakerEdu/blob/main/img/makeredu.png" width="380px" title="메이커 에듀 " alt="RubberDuck"></img><br/>
-
+## [* 2024.10.05 워크샾 자료 다운로드 *](https://drive.google.com/file/d/1B6vXTMgBxP_cT9Lk4LXhLnkU8W_CU2Au/view?usp=drive_link)
 ## [* 윈도우 버전 Maker Link Basic Download (요기 클릭하여 다운받으세요) *](https://drive.google.com/file/d/1_-ftLE83bqgYbNfOpiao--xuhvhGO4xv/view?usp=drive_link)
 ## [* 윈도우 버전 Maker Link Pro Download (요기 클릭하여 다운받으세요) *](https://drive.google.com/file/d/1sENne3vmhQp3ANp1qcoGjtDpfVGa0s40/view?usp=drive_link)
 ## [* CH340 드라이버 (요기 클릭하면 이동합니다) *](https://www.wch.cn/downloads/CH341SER_EXE.html)
